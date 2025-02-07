@@ -5,19 +5,21 @@ __version__ = "1.0.0"
 
 from shape.shape import Shape
 
+
 class Rectangle(Shape):
     """
-    A sub-class representing a rectangle, inherited from Shape
+    A sub-class representing a rectangle, inherited from Shape.
 
     """
     def __init__(self, color: str,
-                  length: int, 
-                  width: int):
+                       length: int, 
+                       width: int):
         """
         Initializes the class attributes with argument values.
         Args: 
-            Length (int): Length of triangle.
-            Width (int): Width of triangle.
+            Color (str): Color of rectangle.
+            Length (int): Length of rectangle.
+            Width (int): Width of rectangle.
 
         Raises:
             ValueError: When length and width are non-numeric.        
@@ -26,14 +28,14 @@ class Rectangle(Shape):
         super().__init__(color)
     
         if isinstance(length, int):
-                self.__length = length
+            self.__length = length
         else:
-            raise ValueError("Lenght must be numeric.")
+            raise ValueError("Length must be numeric.")
     
         if isinstance(width, int):
             self.__width = width
         else:
-            raise ValueError("Widht must be numeric.")
+            raise ValueError("Width must be numeric.")
         
     def __str__(self) ->str:
         value = super().__str__()
@@ -49,7 +51,7 @@ class Rectangle(Shape):
         Returns:
             int: The area of the rectangle, 
             calculated as the product of its length and width.
-            
+
         """
         area = self.__length * self.__width
         return area

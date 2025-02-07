@@ -9,8 +9,8 @@ This activity will help to reinforce learning of the Module 2 concepts of:
 
 ## Author
 
-[Your name]
+Navkaran Singh Sidhu
 
 ## Additional Information
 
-[ Use this space to include additional information that may help in your learning. ]
+This project is designed with key object-oriented programming concepts. By working through this activity, i gained a deeper understanding of how abstraction, inheritance, and polymorphism can be applied to code.

@@ -6,7 +6,7 @@ Usage:
     $ python -m unittest tests/test_triangle.py
 """
 
-__author__ = "Navkaran Singh "
+__author__ = "Navkaran Singh Sidhu"
 __version__ = "1.0.0"
 
 import unittest
@@ -42,7 +42,8 @@ class TestTraingle(unittest.TestCase):
 
     def test_str_valid_traingle_class_returns_formatted_string(self):
         expected = (f"The shape color is Green."
-                   f"\nThis triangle has three sides with lengths of 9, 10 and 11 centimeters.")
+                   f"\nThis triangle has three sides with" 
+                   f" lengths of 9, 10 and 11 centimeters.")
         
         self.assertEqual(expected, str(self.traingle))
 
@@ -60,4 +61,4 @@ class TestTraingle(unittest.TestCase):
         
     def test_init_triangle_Inequality_theorem_raises_value_error(self):
         with self.assertRaises(ValueError):
-            Triangle("Green", 1, 1, 11)
+            Triangle("Green", 9, 1, 11)

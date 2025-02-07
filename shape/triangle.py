@@ -17,7 +17,8 @@ class Triangle(Shape):
                        side_3 : int):
         """
         Initializes the class attributes with argument values.
-        Args: 
+        Args:
+            color (str): Represents the color of the triangle. 
             side_1 (int): Length of first side of triangle.
             side_2 (int): Length of second side of triangle.
             side_3 (int): Length of third side of triangle.
@@ -49,7 +50,8 @@ class Triangle(Shape):
         if  not ((side_1 + side_2 > side_3) and \
                 (side_1 + side_3 > side_2) and \
                 (side_2 + side_3 > side_1)):
-            raise ValueError("The sides do not satisfy the Triangle Inequality Theorem.")
+            raise ValueError("The sides do not satisfy the \
+                              Triangle Inequality Theorem.")
         
     def __str__(self) ->str:
         """

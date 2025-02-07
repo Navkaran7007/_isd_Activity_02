@@ -50,13 +50,13 @@ class TestTraingle(unittest.TestCase):
         self.triangle = Triangle("Green", 9, 10, 11)
         expected = 42.43
 
-        self.assertAlmostEqual(self.triangle.calculate_area(), expected, places=2)
+        self.assertAlmostEqual(expected, round(self.triangle.calculate_area(), 2))
 
     def test_calculate_perimeter_returns_correct_value(self):
         self.triangle = Triangle("Green", 9, 10, 11)
         expected = 30
 
-        self.assertEqual(expected, self.triangle.calculate_perimeter())
+        self.assertEqual(expected, round(self.triangle.calculate_perimeter(), 2))
         
     def test_init_triangle_Inequality_theorem_raises_value_error(self):
         with self.assertRaises(ValueError):

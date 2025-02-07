@@ -25,6 +25,8 @@ class Triangle(Shape):
         Raises:
             ValueError: When side 1,side 2, side 3
                         is non-numeric.
+                        and when the sides do not satisfy the 
+                        Triangle Inequality Theorem.
         
         """
         super().__init__(color)
@@ -63,6 +65,12 @@ class Triangle(Shape):
         return value
     
     def calculate_area(self):
+        """
+        Calculates the area of the triangle .
+
+        Returns:
+            float: The area of the triangle.
+        """
         semi_perimeter = (self.__side_1 + self.__side_2 + self.__side_3) / 2
         area = math.sqrt(semi_perimeter * 
                      (semi_perimeter - self.__side_1) *
@@ -71,6 +79,12 @@ class Triangle(Shape):
         return area
     
     def calculate_perimeter(self):
+        """
+        Calculates the perimeter of the triangle .
+        
+        Returns:
+            float: The perimeter of the triangle.
+        """
         perimeter = self.__side_1 + self.__side_2 + self.__side_3
         return perimeter
         

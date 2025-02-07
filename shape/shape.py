@@ -31,8 +31,17 @@ class Shape(ABC):
 
     @abstractmethod
     def calculate_area(self) -> float:
+        """
+        Calculate the area of the shape. Implemented 
+        in subclass.
+
+        """
         pass
 
     @abstractmethod
     def calculate_perimeter(self) -> float:
+        """
+        Calculate the perimeter of the shape. Implemented 
+        in subclass.
+        """
         pass

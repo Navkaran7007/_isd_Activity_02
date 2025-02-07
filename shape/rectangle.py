@@ -1,9 +1,8 @@
 """This module defines the Rectangle class."""
 
-__author__ = "Navkaran Singh SIdhu"
+__author__ = "Navkaran Singh Sidhu"
 __version__ = "1.0.0"
 
-import math
 from shape.shape import Shape
 
 class Rectangle(Shape):
@@ -44,9 +43,25 @@ class Rectangle(Shape):
         return value
         
     def calculate_area(self):
+        """
+        Calculates the area of the rectangle.
+
+        Returns:
+            int: The area of the rectangle, 
+            calculated as the product of its length and width.
+            
+        """
         area = self.__length * self.__width
         return area
     
     def calculate_perimeter(self):
+        """
+        Calculates the perimeter of the rectangle.
+
+        Returns:
+            int: The perimeter of the rectangle, 
+            calculated as the product of its length and width.
+
+        """
         perimeter = self.__length * 2 + self.__width * 2
         return perimeter

@@ -37,7 +37,8 @@ class TestRectangle(unittest.TestCase):
 
     def test_str_valid_rectangle_class_returns_formatted_string(self):
         expected = (f"The shape color is Green."
-                   f"\nThis rectangle has four sides with the lengths of 9, 10, 9 and 10 centimeters.")
+                   + f"\nThis rectangle has four sides "
+                   + f"with the lengths of 9, 10, 9 and 10 centimeters.")
         
         self.assertEqual(expected, str(self.rectangle))
 
@@ -45,7 +46,7 @@ class TestRectangle(unittest.TestCase):
         self.rectangle = Rectangle("Green", 9, 10)
         expected = 90
 
-        self.assertEqual(expected, self.rectangle.calculate_area())
+        self.assertEqual(expected, round(self.rectangle.calculate_area(), 2))
 
     def test_calculate_perimeter_returns_calculated_value(self):
         self.rectangle = Rectangle("Green", 9, 10)
